@@ -44,6 +44,8 @@ namespace act2
 
         private void bAsignarGuardia_Click(object sender, EventArgs e)
         {
+            if (cbAgentes.SelectedIndex != -1)
+            {
                 int nro = Convert.ToInt32(cbAgentes.Text);
                 int h = Convert.ToInt32(nHora.Text);
                 int m = Convert.ToInt32(nMinutos.Text);
@@ -53,10 +55,12 @@ namespace act2
                 nHora.Text = "0";
                 nMinutos.Text = "0";
                 tbMinutos.Clear();
-                cbGuardias.Items.Add($"{nro} ({g.HoraDesde}:{g.MinutoDesde} a {g.HoraHasta}:{g.MinutoHasta})");
-            
-            
-
+                cbGuardias.Items.Add(nro);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el agente");
+            }
 
         }
 
@@ -90,6 +94,13 @@ namespace act2
 
         private void cBguardias_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void cbGuardias_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Guardia g = comisaria.guardias[Convert.ToInt32(cbGuardias.SelectedIndex)];
+            label12.Text = $"De{g.HoraDesde}:{g.MinutoDesde} a {g.HoraHasta}:{g.MinutoHasta}";
         }
     }
 }

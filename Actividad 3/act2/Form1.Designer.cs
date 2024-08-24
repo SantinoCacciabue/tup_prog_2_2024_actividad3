@@ -32,6 +32,7 @@
             this.bListarInc = new System.Windows.Forms.Button();
             this.bAsignarPolicia = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbAgentes = new System.Windows.Forms.ComboBox();
             this.bAsignarGuardia = new System.Windows.Forms.Button();
             this.tbMinutos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbGuardias = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbAgentes = new System.Windows.Forms.ComboBox();
-            this.cbGuardias = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nMinutos)).BeginInit();
@@ -115,6 +115,14 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Operaciones sobre el agente";
+            // 
+            // cbAgentes
+            // 
+            this.cbAgentes.FormattingEnabled = true;
+            this.cbAgentes.Location = new System.Drawing.Point(132, 17);
+            this.cbAgentes.Name = "cbAgentes";
+            this.cbAgentes.Size = new System.Drawing.Size(77, 21);
+            this.cbAgentes.TabIndex = 8;
             // 
             // bAsignarGuardia
             // 
@@ -217,6 +225,15 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Administración de incidentes";
+            // 
+            // cbGuardias
+            // 
+            this.cbGuardias.FormattingEnabled = true;
+            this.cbGuardias.Location = new System.Drawing.Point(294, 23);
+            this.cbGuardias.Name = "cbGuardias";
+            this.cbGuardias.Size = new System.Drawing.Size(77, 21);
+            this.cbGuardias.TabIndex = 9;
+            this.cbGuardias.SelectedIndexChanged += new System.EventHandler(this.cbGuardias_SelectedIndexChanged_1);
             // 
             // label12
             // 
@@ -356,22 +373,6 @@
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tipo de incidente:";
-            // 
-            // cbAgentes
-            // 
-            this.cbAgentes.FormattingEnabled = true;
-            this.cbAgentes.Location = new System.Drawing.Point(132, 17);
-            this.cbAgentes.Name = "cbAgentes";
-            this.cbAgentes.Size = new System.Drawing.Size(77, 21);
-            this.cbAgentes.TabIndex = 8;
-            // 
-            // cbGuardias
-            // 
-            this.cbGuardias.FormattingEnabled = true;
-            this.cbGuardias.Location = new System.Drawing.Point(294, 23);
-            this.cbGuardias.Name = "cbGuardias";
-            this.cbGuardias.Size = new System.Drawing.Size(77, 21);
-            this.cbGuardias.TabIndex = 9;
             // 
             // Form1
             // 
