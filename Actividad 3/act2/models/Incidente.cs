@@ -14,10 +14,11 @@ namespace act2.models
         public int Hora {  get; set; }
         public int Minuto {  get; set; }
         public int TipoIncidente {  get; private set; }
-        public Incidente(Persona sujeto, Policia oficialACargo)
+        public Incidente(Persona sujeto, Policia oficialACargo, string motivo)
         {
             Sujeto = sujeto;
             OficialACargo = oficialACargo;
+            Motivo = motivo;
         }
         public abstract string VerDescripcion();
     }

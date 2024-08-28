@@ -52,11 +52,11 @@ namespace act2.models
             Incidente nuevo;
             if(tipoIncidente == 1)
             {
-                nuevo = new Arresto(agente, sujeto);
+                nuevo = new Arresto(agente, sujeto, motivo);
             }
             else
             {
-                nuevo = new Denuncia(agente, sujeto);
+                nuevo = new Denuncia(agente, sujeto, motivo);
             }
             nuevo.Hora = h;
             nuevo.Minuto = m;

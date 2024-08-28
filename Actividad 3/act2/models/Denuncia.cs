@@ -8,16 +8,16 @@ namespace act2.models
 {
     internal class Denuncia : Incidente
     {
-        public Denuncia(Policia p, Persona suj) : base(suj, p)
+        public Denuncia(Policia p, Persona suj, string motivo) : base(suj, p,motivo)
         {
 
         }
         public override string VerDescripcion()
         {
-            return $"Denuncia policial, emitida a las {Hora}:{Minuto}" +
-                    $" Motivo:{Motivo}" +
-                    $" Oficial a cargo: {OficialACargo.VerDatos()} " +
-                    $"Sujeto denunciante: {Sujeto.VerDatos()}";
+            return $"{Environment.NewLine}Denuncia policial, emitida a las {Hora}:{Minuto}" +
+                    $"{Environment.NewLine} Motivo:{Motivo}" +
+                    $"{Environment.NewLine} Oficial a cargo: {OficialACargo.VerDatos()} " +
+                    $"{Environment.NewLine}Sujeto denunciante: {Sujeto.VerDatos()}";
         }
     }
 }
